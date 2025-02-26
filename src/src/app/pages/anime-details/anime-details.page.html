@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ anime?.title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-card *ngIf="anime">
+    <img [src]="anime.images?.jpg.image_url" alt="{{ anime.title }}" />
+    <ion-card-header>
+      <ion-card-title>{{ anime.title }}</ion-card-title>
+      <ion-card-subtitle>{{ anime.type }} - {{ anime.episodes }} episodios</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      
+      <p>{{ anime.synopsis }}</p>
+      <ion-button class="back-button" (click)="volverAHome()">⬅️ Volver</ion-button>
+      <ion-button  color="secondary" (click)="addToFavorites()">
+        Agregar a Favoritos
+      </ion-button>
+      <ion-button  color="primary" [href]="anime.url" target="_blank">
+        Ver en MyAnimeList
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  
+  
+
+</ion-content>
