@@ -1,0 +1,57 @@
+/* Contenedor general */
+ion-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  /* Estilo del botón de regresar */
+  .back-button {
+    
+    top: 15px;
+    left: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  
+  /* Estilo de la lista de favoritos */
+  ion-list {
+    width: 100%;
+  }
+  
+  ion-item {
+    --background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+    color: white;
+  }
+  
+  /* Imagen en la lista de favoritos */
+  ion-thumbnail img {
+    border-radius: 10px;
+    width: 80px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  ion-label {
+    h2 {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  
+    p {
+      font-size: 0.8rem;
+      color: #ddd;
+    }
+  }
+  

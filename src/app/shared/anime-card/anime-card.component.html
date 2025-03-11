@@ -1,0 +1,9 @@
+<ion-card *ngIf="anime">
+  <img [src]="anime.images.jpg.image_url" alt="{{ anime.title }}">
+  <ion-card-header>
+    <ion-card-title>{{ anime.title }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <p>{{ anime.synopsis }}</p>
+  </ion-card-content>
+</ion-card>

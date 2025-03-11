@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Favoritos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button class="back-button" (click)="volverAHome()">⬅️ Volver</ion-button>
+  <ion-list *ngIf="favorites.length > 0; else noFavorites">
+    <ion-item *ngFor="let anime of favorites">
+      <ion-thumbnail slot="start">
+        <img [src]="anime.images?.jpg.image_url" alt="{{ anime.title }}" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ anime.title }}</h2>
+        <p>{{ anime.type }} - {{ anime.episodes }} episodios</p>
+      </ion-label>
+      <ion-button color="danger" (click)="removeFavorite(anime.mal_id)">Eliminar</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ng-template #noFavorites>
+    <ion-text color="medium">
+      <p class="ion-text-center">No tienes animes en favoritos.</p>
+    </ion-text>
+  </ng-template>
+</ion-content>
